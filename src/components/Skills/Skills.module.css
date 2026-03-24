@@ -1,0 +1,110 @@
+.skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.skillCategory {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.skillCategory:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent-color);
+}
+
+.categoryTitle {
+    font-size: 1.3rem;
+    color: var(--accent-color);
+    margin-bottom: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.skillsList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skillBarItem {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.skillInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skillName {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.skillPercent {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.progressBar {
+    width: 100%;
+    height: 8px;
+    background-color: var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-color), var(--accent-hover));
+    border-radius: 4px;
+}
+
+.conceptsContainer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.coreConceptsTitle {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.conceptsList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.conceptBadge {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 2px solid var(--accent-color);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: var(--transition);
+    cursor: default;
+}
+
+.conceptBadge:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}

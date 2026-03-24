@@ -1,0 +1,124 @@
+.timelineContainer {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.timelineLine {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background-color: var(--accent-color);
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.timelineItem {
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+.timelineItem:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timelineItem:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+
+.timelineItem::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--bg-color);
+    border: 4px solid var(--accent-color);
+    border-radius: 50%;
+    top: 30px;
+    z-index: 1;
+}
+
+.timelineItem:nth-child(odd)::after {
+    right: -10px;
+}
+
+.timelineItem:nth-child(even)::after {
+    left: -10px;
+}
+
+.timelineContent {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.timelineContent:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent-color);
+}
+
+.jobTitle {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.companyName {
+    font-size: 1.1rem;
+    color: var(--accent-color);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.periodBadge {
+    display: inline-block;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.jobDesc {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Responsive Timeline */
+@media screen and (max-width: 768px) {
+    .timelineLine {
+        left: 20px;
+    }
+
+    .timelineItem {
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 0;
+        text-align: left;
+    }
+
+    .timelineItem:nth-child(odd) {
+        text-align: left;
+    }
+
+    .timelineItem:nth-child(even) {
+        left: 0;
+    }
+
+    .timelineItem::after {
+        left: 10px !important;
+    }
+}
