@@ -135,3 +135,15 @@ ul {
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
+
+/* Mobile Global Responsive */
+@media screen and (max-width: 768px) {
+  .section-wrapper {
+    padding: 70px 15px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+}
