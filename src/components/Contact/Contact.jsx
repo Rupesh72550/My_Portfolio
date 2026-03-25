@@ -29,34 +29,33 @@ const Contact = () => {
     if (errors[name]) setErrors(prev => ({ ...prev, [name]: '' }));
   };
 
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (validateForm()) {
       setIsSubmitting(true);
       try {
-        const backendUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
-        const response = await fetch(`${backendUrl}/api/contact`, {
+        const response = await fetch("/", {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            name: formData.name,
-            email: formData.email,
-            message: formData.message,
-          }),
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({ "form-name": "contact", ...formData })
         });
 
-        const result = await response.json();
-
-        if (response.ok && result.success) {
+        if (response.ok) {
           setIsSubmitted(true);
           setFormData({ name: '', email: '', message: '' });
           setTimeout(() => setIsSubmitted(false), 5000);
         } else {
-          alert(result.message || "Failed to send message. Please try again.");
+          alert("Failed to send message. Please try again.");
         }
       } catch (error) {
         console.error("Form submission error:", error);
-        alert("Network error. Make sure the backend server is running.");
+        alert("Network error while submitting to Netlify Forms.");
       } finally {
         setIsSubmitting(false);
       }
@@ -138,7 +137,8 @@ const Contact = () => {
             )}
           </AnimatePresence>
 
-          <form className={styles.contactForm} onSubmit={handleSubmit} noValidate>
+          <form className={styles.contactForm} name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit} noValidate>
+            <input type="hidden" name="form-name" value="contact" />
             <div className={styles.formGroup}>
               <label htmlFor="name">Your Name</label>
               <input 
