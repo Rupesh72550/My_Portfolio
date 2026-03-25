@@ -35,7 +35,7 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
       <div className={styles.navContainer}>
         <div className={styles.logo}>
           <Link to="hero" smooth={true} duration={500} offset={-80} className={styles.logoText}>
-            Rukesh<span className={styles.accent}>.</span>
+            Rupesh<span className={styles.accent}>.</span>
           </Link>
         </div>
 

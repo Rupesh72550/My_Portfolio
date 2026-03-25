@@ -11,7 +11,7 @@ const Footer = () => {
       <div className={styles.footerContainer}>
         <div className={styles.footerTop}>
           <div className={styles.footerBrand}>
-            <h3>Rukesh<span>.</span></h3>
+            <h3>Rupesh<span>.</span></h3>
             <p>Java Full Stack Developer creating elegant, efficient, and scalable web solutions.</p>
           </div>
           
