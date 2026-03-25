@@ -148,5 +148,14 @@ ul {
   .section-title {
     font-size: 2rem;
     margin-bottom: 2.5rem;
+    text-align: left;
+    left: 0;
+    transform: none;
+    display: inline-block;
+  }
+
+  .section-title::after {
+    left: 0;
+    width: 60px;
   }
 }
