@@ -7,6 +7,7 @@ A sleek, modern, and fully responsive personal portfolio website developed to sh
 * **Modern & Responsive UI:** Designed with fully custom CSS Modules, ensuring a responsive layout across all mobile, tablet, and desktop devices.
 * **Smooth Animations:** Integrated with Framer Motion for premium scroll reveals and seamless entry animations.
 * **Functional Contact Form:** End-to-end working form that captures user details, validates them securely on the server-side, and stores them in MongoDB.
+* **Instant Messaging Setup:** Includes a fully responsive, screen-fixed WhatsApp quick-chat integration so visitors can reach out immediately.
 * **Robust Backend API:** RESTful API built with Express.js, featuring strict Mongoose schema validation, structured controllers, and CORS protection.
 
 ## 🛠️ Tech Stack
@@ -31,7 +32,7 @@ Make sure you have [Node.js](https://nodejs.org/) and [Git](https://git-scm.com/
 
 ### 1. Clone the repository
 ```bash
-git clone <your-github-repo-url>
+git clone https://github.com/Rupesh72550/My_Portfolio.git
 cd portfolio
 ```
 
@@ -151,4 +152,4 @@ Open your browser and navigate to the Local UI link provided by Vite to view and
 * **Role:** Java Full Stack Developer
 * **Email:** [rupesh281255@gmail.com](mailto:rupesh281255@gmail.com)
 * **GitHub:** [https://github.com/Rupesh72550](https://github.com/Rupesh72550)
-* **LinkedIn:** *(Add your LinkedIn Profile URL)*
+* **LinkedIn:** [https://www.linkedin.com/in/rupesh-kumar-gupta-828432182/](https://www.linkedin.com/in/rupesh-kumar-gupta-828432182/)
