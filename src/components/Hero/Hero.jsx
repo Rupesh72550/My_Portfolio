@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import styles from './Hero.module.css';
+import profilePic from '../../profile_pic/profilePic.jpg';
 
 const Hero = () => {
   return (
@@ -63,10 +64,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <div className={styles.imagePlaceholder}>
-            {/* The user wants a circle style placeholder if real image is not provided yet */}
-            <div className={styles.circleGraphic}>
-              <span className={styles.initials}>RKG</span>
-            </div>
+            <img src={profilePic} alt="Rupesh Kumar Gupta" className={styles.profileImage} />
           </div>
         </motion.div>
       </div>

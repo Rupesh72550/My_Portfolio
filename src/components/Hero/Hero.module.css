@@ -86,27 +86,17 @@
     height: 350px;
 }
 
-.circleGraphic {
+.profileImage {
     width: 100%;
     height: 100%;
+    object-fit: cover;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--accent-color) 0%, rgba(0, 123, 255, 0.4) 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     box-shadow: var(--shadow-md);
     position: relative;
     animation: float 6s ease-in-out infinite;
     border: 4px solid var(--bg-color);
     outline: 4px solid var(--accent-color);
     outline-offset: 8px;
-}
-
-.initials {
-    font-size: 5rem;
-    font-weight: 700;
-    color: #fff;
-    letter-spacing: 2px;
 }
 
 @keyframes float {
