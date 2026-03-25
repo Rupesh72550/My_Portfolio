@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaPhone, FaEnvelope, FaLinkedin, FaGithub, FaCheckCircle } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaLinkedin, FaGithub, FaCheckCircle, FaWhatsapp } from 'react-icons/fa';
 import styles from './Contact.module.css';
 
 const Contact = () => {
@@ -112,6 +112,9 @@ const Contact = () => {
               <a href="https://www.linkedin.com/in/rupesh-kumar-gupta-828432182/" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                 <FaLinkedin />
               </a>
+              <a href="https://wa.me/916202507661" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                <FaWhatsapp />
+              </a>
             </div>
           </div>
         </motion.div>
@@ -137,7 +140,7 @@ const Contact = () => {
             )}
           </AnimatePresence>
 
-          <form className={styles.contactForm} onSubmit={handleSubmit} noValidate>
+          <form className={styles.contactForm} onSubmit={handleSubmit}>
             <input type="hidden" name="form-name" value="contact" />
             <div className={styles.formGroup}>
               <label htmlFor="name">Your Name</label>
@@ -145,6 +148,7 @@ const Contact = () => {
                 type="text" 
                 id="name" 
                 name="name" 
+                required
                 value={formData.name} 
                 onChange={handleChange}
                 className={errors.name ? styles.errorInput : ''}
@@ -158,6 +162,7 @@ const Contact = () => {
                 type="email" 
                 id="email" 
                 name="email" 
+                required
                 value={formData.email} 
                 onChange={handleChange}
                 className={errors.email ? styles.errorInput : ''}
@@ -171,6 +176,7 @@ const Contact = () => {
                 id="message" 
                 name="message" 
                 rows="5"
+                required
                 value={formData.message} 
                 onChange={handleChange}
                 className={errors.message ? styles.errorInput : ''}

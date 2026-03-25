@@ -9,6 +9,7 @@ import Experience from './components/Experience/Experience';
 import Achievements from './components/Achievements/Achievements';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import { FaWhatsapp } from 'react-icons/fa';
 import './App.css';
 
 function App() {
@@ -57,6 +58,15 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <a
+        href="https://wa.me/916202507661"
+        className="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp"
+      >
+        <FaWhatsapp />
+      </a>
     </div>
   );
 }
