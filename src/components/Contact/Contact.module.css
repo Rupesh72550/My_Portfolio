@@ -192,3 +192,9 @@
         flex-direction: column;
     }
 }
+
+@media screen and (max-width: 576px) {
+    .contactContainer {
+        padding: 20px;
+    }
+}

@@ -158,4 +158,9 @@
         width: 100%;
         align-items: stretch;
     }
+
+    .imagePlaceholder {
+        width: 200px;
+        height: 200px;
+    }
 }
