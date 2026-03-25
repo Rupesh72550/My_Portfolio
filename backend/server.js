@@ -9,7 +9,13 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://127.0.0.1:5173', 'https://rupesh72550.netlify.app'], // Allow Dev modes and Netlify deployed URL
+  origin: [
+    'http://localhost:5173', 
+    'http://127.0.0.1:5173', 
+    'https://rupesh72550.netlify.app',
+    'https://my-portfolio-30sh86aiq-rupesh-kumars-projects-a68791a0.vercel.app',
+    'https://rupesh72550.vercel.app' // Optional generic fallback
+  ],
   methods: ['GET', 'POST'],
 }));
 app.use(express.json());

@@ -59,13 +59,14 @@ function App() {
       </main>
       <Footer />
       <a
-        href="https://wa.me/916202507661"
+        href="https://wa.me/6202507661"
         className="whatsapp-float"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
       >
         <FaWhatsapp />
+        <span className="whatsapp-tooltip">Chat with me</span>
       </a>
     </div>
   );

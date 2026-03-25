@@ -29,33 +29,30 @@ const Contact = () => {
     if (errors[name]) setErrors(prev => ({ ...prev, [name]: '' }));
   };
 
-  const encode = (data) => {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (validateForm()) {
       setIsSubmitting(true);
       try {
-        const response = await fetch("/", {
+        const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
+        const response = await fetch(`${apiUrl}/api/contact`, {
           method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: encode({ "form-name": "contact", ...formData })
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData)
         });
 
-        if (response.ok) {
+        const data = await response.json();
+
+        if (response.ok && data.success) {
           setIsSubmitted(true);
           setFormData({ name: '', email: '', message: '' });
           setTimeout(() => setIsSubmitted(false), 5000);
         } else {
-          alert("Failed to send message. Please try again.");
+          alert(data.message || "Failed to send message. Please try again.");
         }
       } catch (error) {
         console.error("Form submission error:", error);
-        alert("Network error while submitting to Netlify Forms.");
+        alert("Network error while submitting to the backend.");
       } finally {
         setIsSubmitting(false);
       }
@@ -141,7 +138,6 @@ const Contact = () => {
           </AnimatePresence>
 
           <form className={styles.contactForm} onSubmit={handleSubmit}>
-            <input type="hidden" name="form-name" value="contact" />
             <div className={styles.formGroup}>
               <label htmlFor="name">Your Name</label>
               <input 
