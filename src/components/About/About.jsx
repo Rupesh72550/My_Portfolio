@@ -55,9 +55,9 @@ const About = () => {
             <div className={styles.timelineItem}>
               <div className={styles.timelineDot}></div>
               <div className={styles.timelineContent}>
-                <h4>B.E / B.Tech in Computer Science</h4>
-                <h5>Your University Name</h5>
-                <span className={styles.year}>Graduated / Expected</span>
+                <h4>B.E / B.Tech in Electronics and Communication Engineering</h4>
+                <h5>Sambhram Institute of Technology, Bengaluru Affiliated with Visvesvaraya Technological University(VTU), Belagavi</h5>
+                <span className={styles.year}>Graduated / 2021-2025</span>
                 <p>Focus on software engineering, data structures, and algorithms.</p>
               </div>
             </div>
@@ -66,8 +66,17 @@ const About = () => {
               <div className={styles.timelineDot}></div>
               <div className={styles.timelineContent}>
                 <h4>Higher Secondary Education</h4>
-                <h5>Your College/School Name</h5>
-                <span className={styles.year}>Year completed</span>
+                <h5>National Infotech College</h5>
+                <span className={styles.year}>2020</span>
+              </div>
+            </div>
+
+            <div className={styles.timelineItem}>
+              <div className={styles.timelineDot}></div>
+              <div className={styles.timelineContent}>
+                <h4>Secondary Education</h4>
+                <h5>Tri-juddha M.P.R.Ram Secondary School</h5>
+                <span className={styles.year}>2018</span>
               </div>
             </div>
 

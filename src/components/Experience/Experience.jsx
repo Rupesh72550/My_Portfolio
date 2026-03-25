@@ -7,13 +7,13 @@ const Experience = () => {
     {
       title: 'Java Full Stack Trainee',
       company: 'KodNest',
-      period: 'Duration / Year',
+      period: 'Duration / August 2025 - January 2026',
       description: 'Underwent intensive training in Java, Spring Boot, React.js, and MySQL. Developed full-stack web applications and gained hands-on experience with RESTful APIs, OOP concepts, and MVC architecture.',
     },
     {
       title: 'AI & ML Intern',
       company: 'Rooman Technology',
-      period: 'Duration / Year',
+      period: 'Duration / September 2025 - February 2026',
       description: 'Worked on Machine Learning models and Artificial Intelligence concepts. Assisted in real-world data processing, analysis, and building predictive models using Python.',
     }
   ];
