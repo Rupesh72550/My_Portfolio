@@ -9,7 +9,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://127.0.0.1:5173'], // Restrict to React frontend port
+  origin: ['http://localhost:5173', 'http://127.0.0.1:5173', 'https://rupesh72550.netlify.app'], // Allow Dev modes and Netlify deployed URL
   methods: ['GET', 'POST'],
 }));
 app.use(express.json());
