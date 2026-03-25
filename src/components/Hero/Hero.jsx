@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import styles from './Hero.module.css';
-import profilePic from '../../profile_pic/profilePic.jpg';
+import profilePic from '../../profile_pic/avatar.jpeg';
 
 const Hero = () => {
   return (
