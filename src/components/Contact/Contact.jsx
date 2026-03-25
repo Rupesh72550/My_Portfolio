@@ -137,7 +137,7 @@ const Contact = () => {
             )}
           </AnimatePresence>
 
-          <form className={styles.contactForm} name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit} noValidate>
+          <form className={styles.contactForm} onSubmit={handleSubmit} noValidate>
             <input type="hidden" name="form-name" value="contact" />
             <div className={styles.formGroup}>
               <label htmlFor="name">Your Name</label>
